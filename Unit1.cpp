@@ -8,6 +8,9 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TForm1 *Form1;
+
+
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
@@ -45,5 +48,10 @@ void __fastcall TForm1::Clearall1Click(TObject *Sender)
 void __fastcall TForm1::Selectall1Click(TObject *Sender)
 {
 	RichEdit1->SelectAll();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Findtext1Click(TObject *Sender)
+{
+	FindDialog1->Execute();
 }
 //---------------------------------------------------------------------------

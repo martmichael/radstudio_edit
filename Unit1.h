@@ -10,6 +10,7 @@
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.Menus.hpp>
 #include <Vcl.Dialogs.hpp>
+#include <Vcl.ExtCtrls.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -31,12 +32,16 @@ __published:	// IDE-managed Components
 	TSaveDialog *SaveDialog1;
 	TFontDialog *FontDialog1;
 	TMenuItem *Selectall2;
+	TFindDialog *FindDialog1;
+	TMenuItem *Findtext1;
+	TStatusBar *StatusBar1;
 	void __fastcall Open1Click(TObject *Sender);
 	void __fastcall Save1Click(TObject *Sender);
 	void __fastcall Close1Click(TObject *Sender);
 	void __fastcall Font1Click(TObject *Sender);
 	void __fastcall Clearall1Click(TObject *Sender);
 	void __fastcall Selectall1Click(TObject *Sender);
+	void __fastcall Findtext1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
