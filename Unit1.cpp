@@ -21,6 +21,7 @@ void __fastcall TForm1::Open1Click(TObject *Sender)
 {
 	if (OpenDialog1->Execute() )
 	RichEdit1->Lines->LoadFromFile (OpenDialog1->FileName) ;
+	StatusBar1->Panels->Items[7]->Text = "File directory: " + OpenDialog1->FileName;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Save1Click(TObject *Sender)
@@ -53,5 +54,48 @@ void __fastcall TForm1::Selectall1Click(TObject *Sender)
 void __fastcall TForm1::Findtext1Click(TObject *Sender)
 {
 	FindDialog1->Execute();
+
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::RichEdit1SelectionChange(TObject *Sender)
+{
+	int LNumber = 0;
+	LNumber = SendMessage(RichEdit1->Handle, EM_LINEFROMCHAR, -1, 0);
+
+	StatusBar1->Panels->Items[1]->Text = RichEdit1->SelStart;
+	StatusBar1->Panels->Items[2]->Text = LNumber;
+	StatusBar1->Panels->Items[4]->Text = RichEdit1->SelLength;
+	StatusBar1->Panels->Items[6]->Text = RichEdit1->Lines->Count;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::FindDialog1Find(TObject *Sender)
+{
+int FoundAt, StartPos, ToEnd;
+  TSearchTypes mySearchTypes = TSearchTypes();
+  // begin the search after the current selection
+  // if there is one
+  // otherwise, begin at the start of the text
+  if (FindDialog1->Options.Contains(frMatchCase))
+    mySearchTypes << stMatchCase;
+  if (FindDialog1->Options.Contains(frWholeWord))
+    mySearchTypes << stWholeWord;
+  if (RichEdit1->SelLength)
+    StartPos = RichEdit1->SelStart + RichEdit1->SelLength;
+  else
+    StartPos = 0;
+  // ToEnd is the length from StartPos
+  // to the end of the text in the rich edit control
+  ToEnd = RichEdit1->Text.Length() - StartPos;
+  FoundAt = RichEdit1->FindText(FindDialog1->FindText, StartPos, ToEnd, mySearchTypes);
+  if (FoundAt != -1)
+  {
+    RichEdit1->SetFocus();
+    RichEdit1->SelStart = FoundAt;
+    RichEdit1->SelLength = FindDialog1->FindText.Length();
+  }
+  else Beep();
+}
+//---------------------------------------------------------------------------
+

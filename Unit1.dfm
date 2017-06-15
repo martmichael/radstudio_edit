@@ -11670,11 +11670,11 @@ object Form1: TForm1
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    ScrollBars = ssBoth
+    PopupMenu = PopupMenu1
+    ScrollBars = ssVertical
     TabOrder = 0
     Zoom = 100
-    ExplicitWidth = 713
-    ExplicitHeight = 278
+    OnSelectionChange = RichEdit1SelectionChange
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -11683,14 +11683,38 @@ object Form1: TForm1
     Height = 19
     Panels = <
       item
-        Width = 200
+        Bevel = pbNone
+        Text = 'Position (x, y): '
+        Width = 76
       end
       item
-        Width = 200
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        Width = 40
+      end
+      item
+        Width = 40
+      end
+      item
+        Bevel = pbNone
+        Text = 'Selected:'
+        Width = 51
+      end
+      item
+        Width = 50
+      end
+      item
+        Bevel = pbNone
+        Text = 'Lines:'
+        Width = 38
+      end
+      item
+        Width = 50
+      end
+      item
+        Width = 400
       end>
-    ExplicitLeft = -8
-    ExplicitTop = 278
-    ExplicitWidth = 660
+    ExplicitTop = 323
   end
   object MainMenu1: TMainMenu
     Left = 648
@@ -11729,7 +11753,8 @@ object Form1: TForm1
         OnClick = Selectall1Click
       end
       object Findtext1: TMenuItem
-        Caption = 'Find text'
+        Caption = '&Find text'
+        ShortCut = 16454
         OnClick = Findtext1Click
       end
     end
@@ -11739,23 +11764,28 @@ object Form1: TForm1
     Top = 64
     object Font2: TMenuItem
       Caption = 'Font'
+      OnClick = Font1Click
     end
     object Clearall2: TMenuItem
       Caption = 'Clear all'
+      OnClick = Clearall1Click
     end
     object Selectall2: TMenuItem
       Caption = 'Select all'
       ShortCut = 16449
+      OnClick = Selectall1Click
     end
   end
   object OpenDialog1: TOpenDialog
-    Filter = 'Text files|*.txt|System files|*.sys; *.dat; *.dll;|All files|*.*'
+    Filter = 
+      'Text files|*.txt|Rich text format|*.rtf|System files|*.sys; *.da' +
+      't; *.dll|All files|*.*'
     Left = 584
     Top = 64
   end
   object SaveDialog1: TSaveDialog
     DefaultExt = '.txt'
-    Filter = 'Text files|*.txt; *.rtf|All files|*.*'
+    Filter = 'Text files|*.txt|Rich text format|*.rtf|All files|*.*'
     Left = 584
     Top = 16
   end
@@ -11769,6 +11799,7 @@ object Form1: TForm1
     Top = 112
   end
   object FindDialog1: TFindDialog
+    OnFind = FindDialog1Find
     Left = 584
     Top = 112
   end

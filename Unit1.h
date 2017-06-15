@@ -42,6 +42,8 @@ __published:	// IDE-managed Components
 	void __fastcall Clearall1Click(TObject *Sender);
 	void __fastcall Selectall1Click(TObject *Sender);
 	void __fastcall Findtext1Click(TObject *Sender);
+	void __fastcall RichEdit1SelectionChange(TObject *Sender);
+	void __fastcall FindDialog1Find(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
