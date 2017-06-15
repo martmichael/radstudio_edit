@@ -17,6 +17,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+//main menu button executes open dialog appearance
+//and adds opened file's dir to statusbar
 void __fastcall TForm1::Open1Click(TObject *Sender)
 {
 	if (OpenDialog1->Execute() )
@@ -24,39 +26,46 @@ void __fastcall TForm1::Open1Click(TObject *Sender)
 	StatusBar1->Panels->Items[7]->Text = "File directory: " + OpenDialog1->FileName;
 }
 //---------------------------------------------------------------------------
+//main menu button executes save dialog appearance
 void __fastcall TForm1::Save1Click(TObject *Sender)
 {
 	if (SaveDialog1->Execute() )
 	RichEdit1->Lines-> SaveToFile (SaveDialog1->FileName) ;
 }
 //---------------------------------------------------------------------------
+//Main menu button closes the programm
 void __fastcall TForm1::Close1Click(TObject *Sender)
 {
 	Form1->Close();
 }
 //---------------------------------------------------------------------------
+//main menu and popup menu executes font dialog appearance
 void __fastcall TForm1::Font1Click(TObject *Sender)
 {
 	if (FontDialog1->Execute() )
 	RichEdit1-> Font=FontDialog1-> Font;
 }
 //---------------------------------------------------------------------------
+//Main menu an popup menu button executes cleanse
 void __fastcall TForm1::Clearall1Click(TObject *Sender)
 {
 	RichEdit1->Clear();
 }
 //---------------------------------------------------------------------------
+//Mainmenu and popup menu button executes selection of the whole text
 void __fastcall TForm1::Selectall1Click(TObject *Sender)
 {
 	RichEdit1->SelectAll();
 }
 //---------------------------------------------------------------------------
+//Mainmenu button executes search
 void __fastcall TForm1::Findtext1Click(TObject *Sender)
 {
 	FindDialog1->Execute();
 
 }
 //---------------------------------------------------------------------------
+//Code for adding statusbar values
 void __fastcall TForm1::RichEdit1SelectionChange(TObject *Sender)
 {
 	int LNumber = 0;

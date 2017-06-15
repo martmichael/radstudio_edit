@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2017.06.14 13:25:18.539,=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>2017.06.14 13:25:18.559,=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>2017.06.14 13:46:34.008,C:\edu\course_project_texteditor\radstudio_edit\Unit1.dfm=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2017.06.14 13:46:34.008,C:\edu\course_project_texteditor\radstudio_edit\Unit1.cpp=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>2017.06.14 13:46:34.008,C:\edu\course_project_texteditor\radstudio_edit\Unit1.h=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
-    <Transaction>2017.06.14 13:46:44.838,C:\edu\course_project_texteditor\radstudio_edit\Project1PCH1.h=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>2017.06.14 13:46:50.356,C:\edu\course_project_texteditor\radstudio_edit\EditPCH1.h=C:\edu\course_project_texteditor\radstudio_edit\Project1PCH1.h</Transaction>
-    <Transaction>2017.06.14 13:46:50.371,C:\edu\course_project_texteditor\radstudio_edit\Edit.cbproj=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.008,C:\edu\course_project_texteditor\radstudio_edit\Unit1.dfm=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.838,C:\edu\course_project_texteditor\radstudio_edit\Project1PCH1.h=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.371,C:\edu\course_project_texteditor\radstudio_edit\Edit.cbproj=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.539,=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.008,C:\edu\course_project_texteditor\radstudio_edit\Unit1.cpp=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.008,C:\edu\course_project_texteditor\radstudio_edit\Unit1.h=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.559,=C:\Users\Admin Dell\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.356,C:\edu\course_project_texteditor\radstudio_edit\EditPCH1.h=C:\edu\course_project_texteditor\radstudio_edit\Project1PCH1.h</Transaction>
   </Transactions>
 </BorlandProject>

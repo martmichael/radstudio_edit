@@ -11714,7 +11714,6 @@ object Form1: TForm1
       item
         Width = 400
       end>
-    ExplicitTop = 323
   end
   object MainMenu1: TMainMenu
     Left = 648
